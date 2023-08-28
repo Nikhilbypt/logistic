@@ -18,4 +18,18 @@ eureka:
       defaultZone: http://localhost:9000/eureka
 spring:
   application:
-    name: LOGISTIC_SERVICE
+    name: LOGISTIC-SERVICE
+  datasource:
+    url: jdbc:mysql://localhost:3306/E-Commerce?createTableIfNotExists=true
+    username: root
+    password: Root@456
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+
+jwt:
+  secret: Mk3s@4t9#LpD$7zR8yE6uBqA2vC5xG1gF
+  id: 6mk3dgj7h2m90s4tpd0gj65mf5
