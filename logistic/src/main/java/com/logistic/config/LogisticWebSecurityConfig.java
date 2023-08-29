@@ -29,7 +29,7 @@ public class LogisticWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors().disable()
                 .authorizeRequests()
                 // Secure logistic service URLs
-                .antMatchers("/api/home/**").authenticated()
+                .antMatchers("/api/home/**").permitAll()
                 .and()
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
